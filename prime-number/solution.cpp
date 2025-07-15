@@ -1,21 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int n, i, m=0, flag=0;
-    cout << "Enter the Number to check prime: ";
+int main() {
+    int n;
+    cout << "Enter a number: ";
     cin >> n;
-    m = n/2;
-    for(i=2; i <= m; i++) {
-        if(n % i == 0) {
-            cout << "Number is not Prime." << endl;
-            flag = 1;
-            break;
+
+    if (n <= 1) {
+        cout << "Not Prime\n";
+        return 0;
+    }
+
+    for (int i = 2; i * i <= n; ++i) {
+        if (n % i == 0) {
+            cout << "Not Prime\n";
+            return 0;
         }
     }
-    if(flag == 0) {
-        cout << "Number is Prime." << endl;
-    }
+
+    cout << "Prime\n";
     return 0;
 }
