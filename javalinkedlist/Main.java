@@ -11,6 +11,7 @@ class Main{
         animals.add("Cat");
         animals.addFirst("Elephant");
         animals.removeFirst();
+        
 
         System.out.println(animals);
     }
